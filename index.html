@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Lexend+Deca">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Big+Shoulders+Display">
+
   
   <title>Frontend Mentor | 3-column preview card component</title>
 
@@ -12,21 +15,128 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    * { box-sizing: border-box; }
+
+    body {background-color: hsl(0, 0%, 95%); 
+          Font-size: 15px;}
+
+    .container{
+      width: 60%;
+      display: flex;
+      margin: auto;
+      margin-top: 100px;
+      margin-bottom: 50px;
+    }
+
+    .container div{
+      width: 33.33%;
+      min-height: 50%;
+      padding: 40px;
+      
+      
+    }
+    .first{
+      background-color: hsl(31, 77%, 52%);
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+    .second{
+      background-color: hsl(184, 100%, 22%);
+      
+    }
+
+    .third{
+      background-color: hsl(179, 100%, 13%);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    button {  background-color: hsl(0, 0%, 95%);
+              width: 70%;
+              padding: 10px;
+              margin-top: 20%;
+              border: 2px solid hsl(0, 0%, 95%);
+              border-radius: 40px;
+              font-family: Lexend Deca;
+              font-weight: 400;
+              }
+    
+    .first button{
+      color: hsl(31, 77%, 52%);
+    }
+
+    .second button{
+      color: hsl(184, 100%, 22%);;
+    }
+    
+    .third button { 
+      color: hsl(179, 100%, 13%);
+    }
+
+    button:hover{
+      background-color: hsla(0, 0%, 95%, 0);
+      color: hsl(0, 0%, 95%);
+    }
+    div p:first-of-type{  color: hsl(0, 0%, 95%);
+                          font-family: "Big Shoulders Display";
+                          font-weight: 700;
+                          font-size: 20px;}
+
+    div p:nth-of-type(2) {  color: hsla(0, 0%, 100%, 0.75);
+                            font-family: "Lexend Deca";
+                            font-weight: 400;
+                            max-height: 40%;}
+
+
+    @media (max-width: 770px) {
+      .container{
+        flex-direction: column;
+      }
+      .container div{
+      width: 100%;
+      
+      }
+      .first{ 
+        border-radius: 10px 10px 0px 0px;
+        margin-bottom: 0px;
+      }
+      .third{ 
+        border-radius: 0px 0px 10px 10px;
+      }
+      
+    }
+
+
   </style>
 </head>
 <body>
   
-  Sedans
-  Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
-  or on your next road trip.
-
-  SUVs
-  Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
-  and off-road adventures.
-
-  Luxury
-  Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
-  rental and arrive in style.
+  <div class="container">
+    <div class="first">
+      <img src="images\icon-sedans.svg">
+      <p>SEDANS</p>
+      <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+        or on your next road trip.</p>
+      <button>Learn More</button>
+    </div>
+    <div class="second">
+      <img src="images\icon-suvs.svg">
+      <p>SUVS</p>
+      <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+        and off-road adventures.</p>
+      <button>Learn More</button>
+    </div>
+    <div class="third">
+      <img src="images\icon-luxury.svg">
+      <p>LUXURY</p>
+      <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+        rental and arrive in style.</p>
+      <button>Learn More</button>
+    </div>
+    
+  </div>
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
